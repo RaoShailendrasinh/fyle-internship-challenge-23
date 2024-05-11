@@ -1,0 +1,22 @@
+<!-- repository-list.component.html -->
+<div *ngIf="repositories.length > 0">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div *ngFor="let repo of repositories" class="bg-white rounded shadow p-4">
+        <h3 class="font-bold text-lg">{{ repo.name }}</h3>
+        <p class="text-gray-600">{{ repo.description }}</p>
+        <div class="mt-2">
+          <span *ngFor="let topic of repo.topics" class="bg-gray-200 text-xs text-gray-600 px-2 py-1 rounded mr-1">{{ topic }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="repositories.length === 0" class="mt-8 text-gray-600 text-lg text-center">No repositories found</div>
+  <!-- repositories.component.html -->
+
+<!-- <app-pagination
+  [currentPage]="currentPage"
+  [pageSize]="pageSize"
+  [totalItems]="totalRepositories"
+  (pageChange)="onPageChange($event)"
+  (pageSizeChange)="onPageSizeChange($event)">
+</app-pagination> -->

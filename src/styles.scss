@@ -1,3 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles.css */
+
+/* Apply global styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles for specific components */
+/* App Component */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+/* Search Input */
+.input {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 8px;
+  width: 300px;
+}
+
+/* Search Button */
+.button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Repository Card */
+.repository-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.repository-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.repository-description {
+  margin-top: 8px;
+  color: #4a5568;
+}
+
+.repository-details {
+  margin-top: 8px;
+}
+
+.repository-details p {
+  margin-bottom: 4px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-size-select {
+  margin-right: 8px;
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+  background-color: #edf2f7;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
